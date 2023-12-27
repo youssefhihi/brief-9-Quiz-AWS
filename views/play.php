@@ -13,15 +13,7 @@ $answer_class = new answerDAO($dbconn->pdo);
 $questions = $question_class->getQuestion();
 $numquestions = $question_class->NumQuestions();
 
-
-
-
-
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,74 +89,7 @@ $numquestions = $question_class->NumQuestions();
     
     
 </body>
-<!-- <script>
-    
-const questionContainers = document.querySelectorAll('.question-container');
-let currentIndex = 0;
 
-function showNextQuestion() {
-    questionContainers[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % questionContainers.length;
-    questionContainers[currentIndex].style.display = 'block';
-
-    // Show/hide the "Next Question" button
-    document.getElementById('next').style.display = currentIndex === questionContainers.length - 1 ? 'none' : 'block';
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    loadQuestion(); // Load the initial question
-
-    // Add an event listener for the form submission
-    document.getElementById('quizForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission behavior
-        submitAnswer();
-    });
-});
-
-function loadQuestion() {
-    // Use AJAX to fetch the next question
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                document.getElementById('questionContainer').innerHTML = response.questionHtml;
-            } else {
-                console.error('Error loading question');
-            }
-        }
-    };
-    xhr.open('GET', '../views/play.php'); // Update the URL accordingly
-    xhr.send();
-}
-
-function submitAnswer() {
-    // Use AJAX to submit the answer
-    var formData = new FormData(document.getElementById('quizForm'));
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                // Process the answer submission response if needed
-                console.log(response.message);
-            } else {
-                console.error('Error submitting answer');
-            }
-            // Load the next question after submitting the answer
-            loadQuestion();
-        }
-    };
-    xhr.open('POST', '../controller/checkAnswer.php'); // Update the URL accordingly
-    xhr.send(formData);
-}
-
-
-
-
-
-
-</script> -->
 
     <script src="../assets/js/play.js"></script>
 
