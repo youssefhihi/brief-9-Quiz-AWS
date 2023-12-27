@@ -18,7 +18,7 @@ function startCountdown() {
                 clearInterval(countdownInterval);
                 document.getElementById('countdown').style.display = 'none';
                 document.getElementById('questionContent').style.display = 'block';
-                document.getElementById('text').style.display = 'none';
+          
             } else {
                 updateCountdown();
             }

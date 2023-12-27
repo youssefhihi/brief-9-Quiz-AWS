@@ -41,7 +41,7 @@ class questionDAO {
 
     public function getQuestion() {
         try {
-            $stmt = $this->db->prepare("SELECT * FROM questions ORDER BY RAND()");
+            $stmt = $this->db->prepare("SELECT * FROM questions ");
             $stmt->execute();
             $allQuestions = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,6 +55,8 @@ class questionDAO {
                     $question['theme_id']
                 );
             }
+          
+            
 
             return $questions;
         } catch (PDOException $e) {
@@ -82,7 +84,7 @@ class questionDAO {
             $stmt->execute();
             $questionData = $stmt->fetch(PDO::FETCH_ASSOC);
     
-            return $questionData; // Associative array with 'question_text' and 'explanation'
+            return $questionData; 
         } catch (PDOException $e) {
             echo $e->getMessage();
             return false;

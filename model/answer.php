@@ -53,6 +53,20 @@ class answerDAO {
             return false;
         }
     }
+    function getAnswerInc($idAnswer, $idQuestion) {
+        try {
+            $stmt = $this->db->prepare("SELECT answer_text FROM answers WHERE answer_id = :idA AND question_id = :idQ");
+            $stmt->bindParam(":idA", $idAnswer);
+            $stmt->bindParam(":idQ", $idQuestion);
+            $stmt->execute();
+            $answers = $stmt->fetch(PDO::FETCH_ASSOC);
+           
+            return $answers;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
 
  public function correctAnswer($id_question, $id_answer) {
     $stmt = $this->db->prepare("SELECT COUNT(*) FROM answers WHERE answer_id = :answer_id AND question_id = :question_id AND isCorrect = 1");

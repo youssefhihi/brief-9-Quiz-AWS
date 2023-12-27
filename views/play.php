@@ -32,14 +32,17 @@ $numquestions = $question_class->NumQuestions();
     <title>QUIZ GAME AWS</title>
 </head>
 <body>
+<div class=" absolte  w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 64%"></div>
 <div id="questionContainer"></div>
     <div class="flex flex-col gap-28 pt-20">
-    <div id= "text" style="display: block" class=""><h1 class="text-4xl  font-serif font-semibold text-center"> <?= $name;?> Are You Ready !! </h1></div>
+    <div id= "text"  class=""><h1 class="text-4xl  font-serif font-semibold text-center mb-14"> <span class="text-blue-600"> <?= $name;?></span> Keep Going !! </h1></div>
     <div id="countdown" class=" mx-auto text-9xl font-extralight text-center "></div>
     </div> 
 	
 	<?php
-	if (isset($_GET['questionId'])) {
+   
+	if (isset($_GET['questionId'])  ) {
 		$question = $questions[$_GET['questionId']];
         $theme = $question_class->gettheme($question->getQuestionId());
 		?>
@@ -51,7 +54,7 @@ $numquestions = $question_class->NumQuestions();
                     </div>
         <div id="questionText" class="flex flex-col gap-14">
 		<input id="IdQuestion" type="hidden" name= "id_question" value="<?= $question->getQuestionId(); ?>">
-		<h1 class=" font-medium text-4xl text-center "> Question : <span class="font-mono text-blue-600"><?= $question->getQuestionId(); ?></span></h1>
+		<!-- <h1 class=" font-medium text-4xl text-center "> Question : <span class="font-mono text-blue-600"><?= $question->getQuestionId(); ?></span></h1> -->
 		<p class=" mb-10 font-medium italic text-center text-2xl "><?= $question->getQuestionText(); ?></p>
 		</div>
 		<div class= "mx-auto max-w-2xl grid grid-cols-2  gap-16 text-center ">
@@ -91,6 +94,7 @@ $numquestions = $question_class->NumQuestions();
           
 
     </section>
+    
     
 </body>
 <!-- <script>
