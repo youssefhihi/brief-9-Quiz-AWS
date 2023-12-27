@@ -33,9 +33,9 @@ $name = $_SESSION["name"];
           
             $message = "Good Luck For Next Time $name .  Your result is ";
         } elseif ($result >= 5 && $result < 7 ) {
-            $message = "Nice job $name Keep Going! Your result is ";
+            $message = "Nice job $name Keep Going! try again to success  Your result is ";
         } else {
-            $message = "Good job $name! Your result is ";
+            $message = "Good job $name! You past your Quiz with success Your result is ";
         }
         ?>
 
