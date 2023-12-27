@@ -1,7 +1,4 @@
-# O'PEP
-
-Ce projet consiste à construire un site web pour une pépinière O'PEP en utilisant PHP, avec l'objectif de le rendre facile à utiliser pour tout le monde
-
+## Quiz AWS
 ## Presentation
 
 - [Presentation Link](https://www.canva.com/design/DAF4MNMPxuI/hE8-_R5uYHNB5AnlbWp0tA/edit?utm_content=DAF4MNMPxuI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
@@ -10,8 +7,8 @@ Ce projet consiste à construire un site web pour une pépinière O'PEP en utili
 
 - [Trello Link](https://trello.com/invite/b/opHunXmM/ATTIaa579e4939b019bbe4737487f1b264c3A46898E2/brief-9-quiz)
   
-  ## LINK HOSTING
- - [here](https://quiz-aws.000webhostapp.com/)
+## LINK HOSTING
+ - [Click here](https://quiz-aws1.000webhostapp.com/)
 
 ## Tech Stack
 
