@@ -30,7 +30,7 @@ session_destroy();
         <div class="h-72  p-10  bg-white mx-auto max-w-xl rounded-2xl">
             <form class=" mb-10  mt-10 ml-10 mr-10  flex flex-col gap-10" method="post" action="controller/name.php">
                 <input class="w-80 h-14 rounded-xl border-2 border-blue-500 mx-auto text-center" name="name" type="text" 
-                    placeholder="Enter your name">
+                    placeholder="Enter your name" required>
                 <input
                     class=" w-36 h-10 mx-auto text-xl text-blue-600 font-semibold border border-blue-600 rounded-xl hover:bg-blue-500 hover:text-white duration-300 ease-in-out"
                     type="submit" name="submit" value="Let's Start">
